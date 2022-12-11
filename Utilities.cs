@@ -10,4 +10,9 @@ public static class Utilities
             yield return await reader.ReadLineAsync();
         }
     }
+
+    public static string ReadAllText(int day)
+    {
+        return File.ReadAllText($"Inputs/day{day}.txt");
+    }
 }
