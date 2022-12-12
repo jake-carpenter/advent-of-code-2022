@@ -4,7 +4,7 @@ namespace AdventOfCode.Days;
 
 public class Day7 : BaseDay
 {
-    public override string DayNumberDisplay => "07";
+    protected override string DayNumberDisplay => "07";
 
     protected override async Task<string> GetPartOne()
     {
@@ -80,7 +80,6 @@ public class Day7 : BaseDay
 
         return pathSizes;
     }
-
 
     private static string GetFullPath(Stack<string> pathStack)
     {
