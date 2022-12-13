@@ -2,7 +2,7 @@ namespace AdventOfCode.Days;
 
 public class Day3 : BaseDay
 {
-    protected override string DayNumberDisplay => "03";
+    public override int DayNumber => 3;
 
     protected override async Task<string> GetPartOne()
     {
@@ -34,7 +34,7 @@ public class Day3 : BaseDay
         return sumOfPriorities.ToString();
     }
 
-    protected override async Task<string> GetPartTwo()
+    protected override Task<string> GetPartTwo()
     {
         var badgePrioritySum = 0;
         var lines = Utilities.ReadFileLines(3).ToArray();
@@ -45,7 +45,7 @@ public class Day3 : BaseDay
             badgePrioritySum += GetCharPriority(badge);
         }
 
-        return badgePrioritySum.ToString();
+        return Task.FromResult(badgePrioritySum.ToString());
     }
 
     private static int GetCharPriority(char character)

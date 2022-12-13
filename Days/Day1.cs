@@ -2,7 +2,7 @@ namespace AdventOfCode.Days;
 
 public class Day1 : BaseDay
 {
-    protected override string DayNumberDisplay => "01";
+    public override int DayNumber => 1;
 
     protected override async Task<string> GetPartOne()
     {

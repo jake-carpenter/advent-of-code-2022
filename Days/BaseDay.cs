@@ -4,14 +4,14 @@ namespace AdventOfCode.Days;
 
 public abstract class BaseDay
 {
-    protected abstract string DayNumberDisplay { get; }
+    public abstract int DayNumber { get; }
 
     protected abstract Task<string> GetPartOne();
     protected abstract Task<string> GetPartTwo();
 
     public async Task Execute()
     {
-        Console.WriteLine($"\n--------------- Day {DayNumberDisplay} ---------------");
+        Console.WriteLine($"\n--------------- Day {DayNumber:00} ---------------");
 
         var stopwatch = Stopwatch.StartNew();
         var partOne = await GetPartOne();
